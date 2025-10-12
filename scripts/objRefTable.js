@@ -24,6 +24,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Exps.random,
 		C3.Plugins.Mouse.Cnds.OnClick,
 		C3.Plugins.Sprite.Acts.Spawn,
+		C3.Plugins.Touch.Cnds.OnTapGesture,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.Sprite.Cnds.IsOutsideLayout,
