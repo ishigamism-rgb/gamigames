@@ -16,8 +16,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetTowardPosition,
 		C3.Plugins.Mouse.Exps.X,
 		C3.Plugins.Mouse.Exps.Y,
-		C3.Plugins.Touch.Exps.X,
-		C3.Plugins.Touch.Exps.Y,
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Sprite.Acts.SetWidth,
@@ -33,7 +31,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.scrollto.Acts.Shake,
 		C3.Behaviors.Flash.Acts.Flash,
 		C3.Plugins.Sprite.Acts.SubInstanceVar,
-		C3.Plugins.Sprite.Cnds.CompareInstanceVar
+		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
+		C3.Plugins.Touch.Cnds.OnHoldGesture,
+		C3.Plugins.Touch.Exps.X,
+		C3.Plugins.Touch.Exps.Y
 	];
 };
 self.C3_JsPropNameTable = [
