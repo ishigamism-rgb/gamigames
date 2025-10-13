@@ -19,28 +19,29 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Sprite.Acts.SetWidth,
+		C3.Plugins.Sprite.Acts.SetPos,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Sprite.Acts.SetAngle,
 		C3.Plugins.System.Exps.random,
 		C3.Plugins.Mouse.Cnds.OnClick,
 		C3.Plugins.Sprite.Acts.Spawn,
-		C3.Plugins.Touch.Cnds.OnTapGesture,
+		C3.Plugins.Touch.Cnds.OnTouchStart,
+		C3.Plugins.Touch.Exps.X,
+		C3.Plugins.Touch.Exps.Y,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Plugins.Sprite.Acts.SubInstanceVar,
 		C3.Plugins.Sprite.Cnds.IsOutsideLayout,
 		C3.Behaviors.scrollto.Acts.Shake,
 		C3.Behaviors.Flash.Acts.Flash,
-		C3.Plugins.Sprite.Acts.SubInstanceVar,
-		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
-		C3.Plugins.Touch.Cnds.OnHoldGesture,
-		C3.Plugins.Touch.Exps.X,
-		C3.Plugins.Touch.Exps.Y
+		C3.Plugins.Sprite.Cnds.CompareInstanceVar
 	];
 };
 self.C3_JsPropNameTable = [
 	{TiledBackground: 0},
 	{Touch: 0},
 	{HP: 0},
+	{MaxHP: 0},
 	{"8Direction": 0},
 	{ScrollTo: 0},
 	{BoundToLayout: 0},
@@ -53,7 +54,8 @@ self.C3_JsPropNameTable = [
 	{Fade: 0},
 	{SparkFlash: 0},
 	{Mouse: 0},
-	{Hpbar: 0}
+	{Hpbar: 0},
+	{HpbarEnemy: 0}
 ];
 
 self.InstanceType = {
@@ -64,5 +66,6 @@ self.InstanceType = {
 	Spell: class extends self.ISpriteInstance {},
 	SparkFlash: class extends self.ISpriteInstance {},
 	Mouse: class extends self.IInstance {},
-	Hpbar: class extends self.ISpriteInstance {}
+	Hpbar: class extends self.ISpriteInstance {},
+	HpbarEnemy: class extends self.ISpriteInstance {}
 }
