@@ -12,6 +12,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.destroy,
 		C3.Behaviors.Fade,
 		C3.Plugins.Mouse,
+		C3.Plugins.Text,
+		C3.Plugins.Tilemap,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Sprite.Acts.SetTowardPosition,
 		C3.Plugins.Mouse.Exps.X,
@@ -25,16 +27,17 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Exps.random,
 		C3.Plugins.Mouse.Cnds.OnClick,
 		C3.Plugins.Sprite.Acts.Spawn,
-		C3.Plugins.Touch.Cnds.OnTouchStart,
-		C3.Plugins.Touch.Exps.X,
-		C3.Plugins.Touch.Exps.Y,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.Sprite.Acts.SubInstanceVar,
 		C3.Plugins.Sprite.Cnds.IsOutsideLayout,
 		C3.Behaviors.scrollto.Acts.Shake,
 		C3.Behaviors.Flash.Acts.Flash,
-		C3.Plugins.Sprite.Cnds.CompareInstanceVar
+		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.TiledBg.Acts.SetPos,
+		C3.Plugins.System.Exps.layoutwidth,
+		C3.Plugins.System.Exps.layoutheight
 	];
 };
 self.C3_JsPropNameTable = [
@@ -55,7 +58,10 @@ self.C3_JsPropNameTable = [
 	{SparkFlash: 0},
 	{Mouse: 0},
 	{Hpbar: 0},
-	{HpbarEnemy: 0}
+	{HpbarEnemy: 0},
+	{Text: 0},
+	{Tilemap: 0},
+	{TiledBackground2: 0}
 ];
 
 self.InstanceType = {
@@ -67,5 +73,8 @@ self.InstanceType = {
 	SparkFlash: class extends self.ISpriteInstance {},
 	Mouse: class extends self.IInstance {},
 	Hpbar: class extends self.ISpriteInstance {},
-	HpbarEnemy: class extends self.ISpriteInstance {}
+	HpbarEnemy: class extends self.ISpriteInstance {},
+	Text: class extends self.ITextInstance {},
+	Tilemap: class extends self.ITilemapInstance {},
+	TiledBackground2: class extends self.ITiledBackgroundInstance {}
 }
