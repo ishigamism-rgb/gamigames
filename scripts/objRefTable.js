@@ -9,24 +9,24 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.bound,
 		C3.Behaviors.Flash,
 		C3.Behaviors.Bullet,
-		C3.Behaviors.destroy,
 		C3.Behaviors.Fade,
 		C3.Plugins.Mouse,
 		C3.Plugins.Text,
 		C3.Plugins.Tilemap,
 		C3.Behaviors.Tween,
+		C3.Behaviors.solid,
 		C3.Plugins.System.Cnds.EveryTick,
-		C3.Plugins.Sprite.Acts.SetTowardPosition,
-		C3.Plugins.Sprite.Exps.X,
-		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Sprite.Acts.SetWidth,
 		C3.Plugins.Sprite.Acts.SetPos,
+		C3.Plugins.Sprite.Exps.X,
+		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Sprite.Acts.SetAngle,
 		C3.Plugins.System.Exps.random,
 		C3.Plugins.Touch.Cnds.OnTouchStart,
+		C3.Plugins.Sprite.Acts.SetTowardPosition,
 		C3.Plugins.Touch.Exps.X,
 		C3.Plugins.Touch.Exps.Y,
 		C3.Plugins.Sprite.Acts.Spawn,
@@ -60,7 +60,6 @@ self.C3_JsPropNameTable = [
 	{Player: 0},
 	{Bullet: 0},
 	{Goblin: 0},
-	{DestroyOutsideLayout: 0},
 	{Spell: 0},
 	{Fade: 0},
 	{SparkFlash: 0},
@@ -73,7 +72,9 @@ self.C3_JsPropNameTable = [
 	{RetryButton: 0},
 	{TiledBackground3: 0},
 	{Tween: 0},
-	{DamageText: 0}
+	{DamageText: 0},
+	{Solid: 0},
+	{Wall: 0}
 ];
 
 self.InstanceType = {
@@ -91,5 +92,6 @@ self.InstanceType = {
 	TiledBackground2: class extends self.ITiledBackgroundInstance {},
 	RetryButton: class extends self.ISpriteInstance {},
 	TiledBackground3: class extends self.ITiledBackgroundInstance {},
-	DamageText: class extends self.ITextInstance {}
+	DamageText: class extends self.ITextInstance {},
+	Wall: class extends self.ISpriteInstance {}
 }
