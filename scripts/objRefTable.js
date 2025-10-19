@@ -14,6 +14,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Mouse,
 		C3.Plugins.Text,
 		C3.Plugins.Tilemap,
+		C3.Behaviors.Tween,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Sprite.Acts.SetTowardPosition,
 		C3.Plugins.Sprite.Exps.X,
@@ -30,11 +31,17 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Touch.Exps.Y,
 		C3.Plugins.Sprite.Acts.Spawn,
 		C3.Plugins.Sprite.Cnds.OnCollision,
+		C3.Plugins.System.Acts.CreateObject,
+		C3.Behaviors.Tween.Acts.TweenValue,
+		C3.Plugins.Text.Exps.Y,
+		C3.Behaviors.Flash.Acts.Flash,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.Sprite.Acts.SubInstanceVar,
+		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.System.Acts.Wait,
+		C3.Plugins.Text.Acts.Destroy,
 		C3.Plugins.Sprite.Cnds.IsOutsideLayout,
 		C3.Behaviors.scrollto.Acts.Shake,
-		C3.Behaviors.Flash.Acts.Flash,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
 		C3.Plugins.TiledBg.Acts.SetPos,
 		C3.Plugins.System.Exps.layoutwidth,
@@ -64,7 +71,9 @@ self.C3_JsPropNameTable = [
 	{Tilemap: 0},
 	{TiledBackground2: 0},
 	{RetryButton: 0},
-	{TiledBackground3: 0}
+	{TiledBackground3: 0},
+	{Tween: 0},
+	{DamageText: 0}
 ];
 
 self.InstanceType = {
@@ -81,5 +90,6 @@ self.InstanceType = {
 	Tilemap: class extends self.ITilemapInstance {},
 	TiledBackground2: class extends self.ITiledBackgroundInstance {},
 	RetryButton: class extends self.ISpriteInstance {},
-	TiledBackground3: class extends self.ITiledBackgroundInstance {}
+	TiledBackground3: class extends self.ITiledBackgroundInstance {},
+	DamageText: class extends self.ITextInstance {}
 }
