@@ -45,7 +45,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
 		C3.Plugins.TiledBg.Acts.SetPos,
 		C3.Plugins.System.Exps.layoutwidth,
-		C3.Plugins.System.Exps.layoutheight
+		C3.Plugins.System.Exps.layoutheight,
+		C3.Plugins.System.Acts.AddVar,
+		C3.Plugins.System.Cnds.Every
 	];
 };
 self.C3_JsPropNameTable = [
@@ -74,7 +76,9 @@ self.C3_JsPropNameTable = [
 	{Tween: 0},
 	{DamageText: 0},
 	{Solid: 0},
-	{Wall: 0}
+	{Wall: 0},
+	{ScoreText: 0},
+	{Score: 0}
 ];
 
 self.InstanceType = {
@@ -93,5 +97,6 @@ self.InstanceType = {
 	RetryButton: class extends self.ISpriteInstance {},
 	TiledBackground3: class extends self.ITiledBackgroundInstance {},
 	DamageText: class extends self.ITextInstance {},
-	Wall: class extends self.ISpriteInstance {}
+	Wall: class extends self.ISpriteInstance {},
+	ScoreText: class extends self.ITextInstance {}
 }
