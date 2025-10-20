@@ -22,14 +22,17 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Plugins.System.Acts.GoToLayout,
-		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.System.Cnds.For,
+		C3.Plugins.Sprite.Acts.Spawn,
 		C3.Plugins.Sprite.Acts.SetAngle,
+		C3.Plugins.Sprite.Exps.Angle,
+		C3.Plugins.System.Exps.loopindex,
+		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.System.Exps.random,
 		C3.Plugins.Touch.Cnds.OnTouchStart,
 		C3.Plugins.Sprite.Acts.SetTowardPosition,
 		C3.Plugins.Touch.Exps.X,
 		C3.Plugins.Touch.Exps.Y,
-		C3.Plugins.Sprite.Acts.Spawn,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.System.Acts.CreateObject,
 		C3.Behaviors.Tween.Acts.TweenValue,
@@ -47,7 +50,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.System.Cnds.Every,
 		C3.Plugins.System.Cnds.CompareVar,
-		C3.Behaviors.Bullet.Acts.SetSpeed
+		C3.Behaviors.Bullet.Acts.SetSpeed,
+		C3.Plugins.Sprite.Cnds.OnCreated
 	];
 };
 self.C3_JsPropNameTable = [

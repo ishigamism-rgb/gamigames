@@ -1359,6 +1359,16 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() + 60);
 		},
+		() => "i",
+		() => 0,
+		() => 4,
+		() => 1,
+		() => "",
+		p => {
+			const n0 = p._GetNode(0);
+			const f1 = p._GetNode(1).GetBoundMethod();
+			return () => ((n0.ExpObject() - 20) + (f1("i") * 20));
+		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(360);
@@ -1368,9 +1378,6 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0();
 		},
-		() => 0,
-		() => 1,
-		() => "",
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 10);
@@ -1396,8 +1403,10 @@ self.C3_ExpressionFuncs = [
 		() => 193,
 		() => 50,
 		() => 200,
+		() => 400,
 		() => 300,
-		() => 0.2
+		() => 0.2,
+		() => 3
 ];
 
 
