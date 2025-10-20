@@ -43,11 +43,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.IsOutsideLayout,
 		C3.Behaviors.scrollto.Acts.Shake,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
-		C3.Plugins.TiledBg.Acts.SetPos,
-		C3.Plugins.System.Exps.layoutwidth,
-		C3.Plugins.System.Exps.layoutheight,
+		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.System.Acts.AddVar,
-		C3.Plugins.System.Cnds.Every
+		C3.Plugins.System.Cnds.Every,
+		C3.Plugins.System.Cnds.CompareVar,
+		C3.Behaviors.Bullet.Acts.SetSpeed
 	];
 };
 self.C3_JsPropNameTable = [
@@ -78,6 +78,10 @@ self.C3_JsPropNameTable = [
 	{Solid: 0},
 	{Wall: 0},
 	{ScoreText: 0},
+	{TiledBackground4: 0},
+	{TiledBackground5: 0},
+	{TiledBackground6: 0},
+	{GameOver: 0},
 	{Score: 0}
 ];
 
@@ -98,5 +102,8 @@ self.InstanceType = {
 	TiledBackground3: class extends self.ITiledBackgroundInstance {},
 	DamageText: class extends self.ITextInstance {},
 	Wall: class extends self.ISpriteInstance {},
-	ScoreText: class extends self.ITextInstance {}
+	ScoreText: class extends self.ITextInstance {},
+	TiledBackground4: class extends self.ITiledBackgroundInstance {},
+	TiledBackground5: class extends self.ITiledBackgroundInstance {},
+	TiledBackground6: class extends self.ITiledBackgroundInstance {}
 }

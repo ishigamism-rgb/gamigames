@@ -1389,16 +1389,15 @@ self.C3_ExpressionFuncs = [
 		() => 0.4,
 		() => 100,
 		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => (f0() / 2);
-		},
-		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => and("Score: ", v0.GetValue());
 		},
-		() => 2,
 		() => 357,
-		() => 193
+		() => 193,
+		() => 50,
+		() => 200,
+		() => 300,
+		() => 0.2
 ];
 
 
