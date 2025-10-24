@@ -4,8 +4,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.TiledBg,
 		C3.Plugins.Touch,
 		C3.Plugins.Sprite,
-		C3.Behaviors.EightDir,
-		C3.Behaviors.scrollto,
 		C3.Behaviors.bound,
 		C3.Behaviors.Flash,
 		C3.Behaviors.Bullet,
@@ -22,36 +20,33 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Plugins.System.Acts.GoToLayout,
-		C3.Plugins.System.Cnds.For,
-		C3.Plugins.Sprite.Acts.Spawn,
-		C3.Plugins.Sprite.Acts.SetAngle,
-		C3.Plugins.Sprite.Exps.Angle,
-		C3.Plugins.System.Exps.loopindex,
 		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.Sprite.Acts.SetAngle,
 		C3.Plugins.System.Exps.random,
-		C3.Plugins.Touch.Cnds.OnTouchStart,
-		C3.Plugins.Sprite.Acts.SetTowardPosition,
-		C3.Plugins.Touch.Exps.X,
-		C3.Plugins.Touch.Exps.Y,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.System.Acts.CreateObject,
 		C3.Behaviors.Tween.Acts.TweenValue,
 		C3.Plugins.Text.Exps.Y,
 		C3.Behaviors.Flash.Acts.Flash,
+		C3.Plugins.Sprite.Acts.Spawn,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.Sprite.Acts.SubInstanceVar,
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.Text.Acts.Destroy,
 		C3.Plugins.Sprite.Cnds.IsOutsideLayout,
-		C3.Behaviors.scrollto.Acts.Shake,
+		C3.Plugins.Sprite.Acts.SetTowardPosition,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.System.Cnds.Every,
+		C3.Plugins.Sprite.Exps.Angle,
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Behaviors.Bullet.Acts.SetSpeed,
-		C3.Plugins.Sprite.Cnds.OnCreated
+		C3.Plugins.Sprite.Cnds.OnCreated,
+		C3.Plugins.Touch.Cnds.IsTouchingObject,
+		C3.Plugins.Sprite.Acts.SetX,
+		C3.Plugins.Touch.Exps.X
 	];
 };
 self.C3_JsPropNameTable = [
@@ -59,8 +54,6 @@ self.C3_JsPropNameTable = [
 	{Touch: 0},
 	{HP: 0},
 	{MaxHP: 0},
-	{"8Direction": 0},
-	{ScrollTo: 0},
 	{BoundToLayout: 0},
 	{Flash: 0},
 	{Player: 0},
@@ -85,6 +78,7 @@ self.C3_JsPropNameTable = [
 	{TiledBackground4: 0},
 	{TiledBackground5: 0},
 	{TiledBackground6: 0},
+	{SparkFlash2: 0},
 	{GameOver: 0},
 	{Score: 0}
 ];
@@ -109,5 +103,6 @@ self.InstanceType = {
 	ScoreText: class extends self.ITextInstance {},
 	TiledBackground4: class extends self.ITiledBackgroundInstance {},
 	TiledBackground5: class extends self.ITiledBackgroundInstance {},
-	TiledBackground6: class extends self.ITiledBackgroundInstance {}
+	TiledBackground6: class extends self.ITiledBackgroundInstance {},
+	SparkFlash2: class extends self.ISpriteInstance {}
 }
